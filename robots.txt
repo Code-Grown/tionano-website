@@ -1,0 +1,25 @@
+# robots.txt — Tío Nano
+# Sitio privado: solo accesible por contacto directo o QR.
+# Se bloquea la indexación de todo el sitio para todos los crawlers.
+
+User-agent: *
+Disallow: /
+
+# Refuerzo explícito para los bots más comunes
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: facebot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /

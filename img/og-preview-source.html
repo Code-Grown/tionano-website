@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--
+  OG PREVIEW — Tío Nano
+  Abrir en Chrome → zoom 100% → capturar exactamente 1200×630px
+  Extensión recomendada: "GoFullPage" o "Awesome Screenshot"
+  Guardar como: og-preview.png en esta misma carpeta
+
+  Generar una nueva:
+  node scripts/generate-og.mjs
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@400;700;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .card {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(135deg, #E65100 0%, #F57F17 40%, #F9A825 75%, #FFD54F 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Círculos decorativos de fondo */
+    .deco-circle-1 {
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      top: -120px; right: -80px;
+    }
+    .deco-circle-2 {
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      bottom: -100px; left: 320px;
+    }
+    .deco-circle-3 {
+      position: absolute;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      top: 40px; left: 560px;
+    }
+
+    /* Lado izquierdo — texto */
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      z-index: 1;
+      max-width: 620px;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .bus-icon {
+      font-size: 56px;
+      line-height: 1;
+    }
+
+    .brand-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 72px;
+      color: white;
+      line-height: 1;
+      text-shadow: 2px 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .tagline {
+      font-size: 28px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.95);
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+    }
+
+    .description {
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.5;
+    }
+
+    /* Badges */
+    .badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.18);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      border-radius: 30px;
+      padding: 6px 18px;
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* MTT badge */
+    .mtt-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.35);
+      border-radius: 40px;
+      padding: 8px 20px 8px 10px;
+      margin-top: 4px;
+      width: fit-content;
+    }
+    .mtt-badge img {
+      height: 42px;
+      width: 42px;
+      border-radius: 50%;
+      background: white;
+      padding: 3px;
+      object-fit: contain;
+    }
+    .mtt-badge span {
+      font-size: 15px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.92);
+    }
+
+    /* Lado derecho — furgón */
+    .right {
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .right img {
+      height: 420px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 32px rgba(0,0,0,0.22));
+    }
+
+    /* URL en la parte inferior */
+    .url-bar {
+      position: absolute;
+      bottom: 28px;
+      left: 80px;
+      font-size: 17px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.06em;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="deco-circle-1"></div>
+    <div class="deco-circle-2"></div>
+    <div class="deco-circle-3"></div>
+
+    <div class="left">
+      <div class="brand-row">
+        <span class="bus-icon">🚌</span>
+        <span class="brand-name">Tío Nano</span>
+      </div>
+
+      <div class="tagline">Transporte Escolar de Confianza</div>
+
+      <div class="description">
+        Más de 30 años llevando niños al colegio<br>
+        de forma segura, puntual y con cariño.
+      </div>
+
+      <div class="badges">
+        <div class="badge">✅ Furgón habilitado</div>
+        <div class="badge">📍 Coquimbo</div>
+      </div>
+
+      <div class="mtt-badge">
+        <img src="mtt-autorizado.png" alt="MTT" onerror="this.style.display='none'" />
+        <span>Autorizado por el Ministerio de Transportes</span>
+      </div>
+    </div>
+
+    <div class="right">
+      <img src="nissan-nv350.png" alt="Nissan NV 350 — Tío Nano"
+           onerror="this.outerHTML='<div style=\'font-size:200px;line-height:1\'>🚐</div>'" />
+    </div>
+
+    <div class="url-bar">www.tionano.cl</div>
+  </div>
+</body>
+</html>
