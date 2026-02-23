@@ -1,0 +1,1 @@
+import{_ as c,c as _,d as e,w as r,r as n,o as l,b as t}from"./COCGH8PB.js";const d={__name:"index",setup(i){return(p,o)=>{const a=n("v-icon"),s=n("v-container");return l(),_("div",null,[e(s,null,{default:r(()=>[o[0]||(o[0]=t("h1",null,"Portafolio",-1)),t("span",null,[e(a,{icon:"mdi-home"})])]),_:1})])}}},u=c(d,[["__scopeId","data-v-ab4ddabb"]]);export{u as default};
