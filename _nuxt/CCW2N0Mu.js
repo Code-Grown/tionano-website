@@ -1,0 +1,1 @@
+import{_ as c,A as _,D as n,E as l,g as o,z as r,B as t}from"./Cyttsv_4.js";const i={__name:"index",setup(d){return(p,e)=>{const s=o("v-icon"),a=o("v-container");return r(),_("div",null,[n(a,null,{default:l(()=>[e[0]||(e[0]=t("h1",null,"Redes Sociales",-1)),t("span",null,[n(s,{icon:"mdi-home"})])]),_:1})])}}},u=c(i,[["__scopeId","data-v-7b713df3"]]);export{u as default};
