@@ -1,11 +1,8 @@
 # robots.txt — Tío Nano
-# Sitio privado: solo accesible por contacto directo o QR.
-# Se bloquea la indexación de todo el sitio para todos los crawlers.
+# Objetivo: bloquear indexación en buscadores pero PERMITIR previews en WhatsApp/redes.
+# WhatsApp usa facebot/FacebookExternalHit para leer og:image y mostrar la miniatura.
 
-User-agent: *
-Disallow: /
-
-# Refuerzo explícito para los bots más comunes
+# ── Buscadores: bloqueados ──────────────────────────────
 User-agent: Googlebot
 Disallow: /
 
@@ -18,8 +15,35 @@ Disallow: /
 User-agent: DuckDuckBot
 Disallow: /
 
-User-agent: facebot
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: YandexBot
 Disallow: /
 
 User-agent: ia_archiver
+Disallow: /
+
+# ── Crawlers de preview social: PERMITIDOS ──────────────
+# WhatsApp y Facebook necesitan acceder a og:image para mostrar la miniatura.
+User-agent: facebot
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ── Cualquier otro bot: bloqueado ───────────────────────
+User-agent: *
 Disallow: /
