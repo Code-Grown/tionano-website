@@ -1,0 +1,1 @@
+import{_ as c,A as _,D as e,E as r,g as n,z as l,B as t}from"./CPkb4qpa.js";const i={__name:"index",setup(d){return(p,o)=>{const a=n("v-icon"),s=n("v-container");return l(),_("div",null,[e(s,null,{default:r(()=>[o[0]||(o[0]=t("h1",null,"Portafolio",-1)),t("span",null,[e(a,{icon:"mdi-home"})])]),_:1})])}}},u=c(i,[["__scopeId","data-v-ab4ddabb"]]);export{u as default};
