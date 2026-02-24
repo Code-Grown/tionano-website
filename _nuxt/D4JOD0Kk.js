@@ -1,0 +1,1 @@
+import{m as i,n as a}from"./BvfN5THm.js";import{u as e}from"./DdXxx_sv.js";import"./C-bsII9k.js";import"./CJl0fYgD.js";const d=i(t=>{if(!t.path.startsWith("/admin")||t.path==="/admin/login")return;if(!e().isAuthenticated)return a("/admin/login")});export{d as default};
