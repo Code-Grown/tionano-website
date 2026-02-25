@@ -1,30 +1,33 @@
 # robots.txt — Tío Nano
-# Objetivo: bloquear indexación en buscadores pero PERMITIR previews en WhatsApp/redes.
-# WhatsApp usa facebot/FacebookExternalHit para leer og:image y mostrar la miniatura.
+# Páginas públicas: indexables por Google y buscadores.
+# Páginas privadas (/admin, /apoderado, /contacto): bloqueadas.
 
-# ── Buscadores: bloqueados ──────────────────────────────
+# ── Google y buscadores principales ────────────────────
 User-agent: Googlebot
-Disallow: /
+Disallow: /admin
+Disallow: /apoderado
+Disallow: /contacto
+Allow: /
 
 User-agent: Bingbot
-Disallow: /
+Disallow: /admin
+Disallow: /apoderado
+Disallow: /contacto
+Allow: /
 
 User-agent: Slurp
-Disallow: /
+Disallow: /admin
+Disallow: /apoderado
+Disallow: /contacto
+Allow: /
 
 User-agent: DuckDuckBot
-Disallow: /
+Disallow: /admin
+Disallow: /apoderado
+Disallow: /contacto
+Allow: /
 
-User-agent: Baiduspider
-Disallow: /
-
-User-agent: YandexBot
-Disallow: /
-
-User-agent: ia_archiver
-Disallow: /
-
-# ── Crawlers de preview social: PERMITIDOS ──────────────
+# ── Crawlers de preview social: acceso total ───────────
 # WhatsApp y Facebook necesitan acceder a og:image para mostrar la miniatura.
 User-agent: facebot
 Allow: /
@@ -44,6 +47,12 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# ── Cualquier otro bot: bloqueado ───────────────────────
+# ── Cualquier otro bot ─────────────────────────────────
 User-agent: *
-Disallow: /
+Disallow: /admin
+Disallow: /apoderado
+Disallow: /contacto
+Allow: /
+
+# ── Sitemap ────────────────────────────────────────────
+Sitemap: https://www.tionano.cl/sitemap.xml
