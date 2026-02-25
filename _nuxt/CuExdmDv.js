@@ -1,0 +1,1 @@
+import{m as r,n as a}from"./BhXooyBA.js";import{u as i}from"./CTk10qqo.js";import{u as d}from"./D7nl4Qbl.js";import"./C-bsII9k.js";import"./CJl0fYgD.js";const f=r(o=>{if(o.path==="/apoderado/login")return;const{isAuthenticated:t}=i(),{isAuthenticated:e}=d();if(!t&&!e)return a("/apoderado/login")});export{f as default};
